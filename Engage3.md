@@ -1,5 +1,5 @@
 # Test website for clickjacking
-If ClickJackPOC.py doesn't work, www.clickjacker.io
+If ClickJackPOC.py doesn't work, try www.clickjacker.io
 
 # Finding HTTP and Web servers for websites
 - Can use http-recon

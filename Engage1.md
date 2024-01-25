@@ -52,3 +52,8 @@ ldapsearch -x -h <target-ip> -b “dc=<domainController>,dc=com" "objectclass=us
 
 # Enumerating DNS
 dig ns www.certifiedhacker.com (ns=name servers)
+
+# Vulnerability Scans
+1. nmap -Pn --script vuln <ip>
+2. search up CVE numbers to learn more
+

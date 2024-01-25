@@ -1,5 +1,4 @@
 # Password cracking
-
 sudo john --format=”<NAME>” “<FILENAME>”
 
 # Steganography
@@ -43,3 +42,15 @@ Windows Service Monitoring (Use SrvMan)
 1. Filter with http.request.method==POST
 2. Find a HTTP/1.1 Packet
 3. Scroll down to 'HTML Form URL Encoded' and expand
+
+# Find Custom UDP packets
+1. Filter with udp
+
+# Find DOS
+1. Filter tcp.flags.syn == 1 
+2. Typically IP with more packets sent to it is the target machine
+
+# Find DDOS
+1. Statistics -> IPv4 -> Source and Destination
+2. Set ip.dst to whatever has the most packets sent to
+3. Edit -> Find Packet -> String = TCP Port numbers reused
