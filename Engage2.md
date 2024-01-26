@@ -19,6 +19,8 @@ Try matching required field with number of packets sent
 Finding filepos or memory pos (Use BinText)
 
 Analyze ELF exe (Use DIE)
+Can also analyze Executable Files with PE Extraction Tools
+- Upload file then check 'header file'
 
 Check operating system registry for changes (Use Reg Organizer)
 Tools -> Registry Snapshots -> Create and Compare with Current Registry
@@ -54,3 +56,4 @@ Windows Service Monitoring (Use SrvMan)
 1. Statistics -> IPv4 -> Source and Destination
 2. Set ip.dst to whatever has the most packets sent to
 3. Edit -> Find Packet -> String = TCP Port numbers reused
+

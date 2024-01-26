@@ -1,5 +1,4 @@
 # Host Discovery
-
 When trying to figure out the number of live hosts on a subnet, the following command will work
 
 sudo nmap -T5 -sV <ip>/24
@@ -18,7 +17,6 @@ sudo dig axfr www.certifiedhacker.com zonetransfer.me
 If 'Transfer failed' log shows up, DNS zone transfer is not possible
 
 # Finding Domain Controller, FQDN, NetBios, DNS Computer Name
-
 sudo nmap -p 389 <target>
 Whichever has STATE=open is the Domain Controller
 
@@ -56,4 +54,16 @@ dig ns www.certifiedhacker.com (ns=name servers)
 # Vulnerability Scans
 1. nmap -Pn --script vuln <ip>
 2. search up CVE numbers to learn more
+3. Good site to use www.cvedetails.com
 
+# Privilege Escalation
+You found user credentials for an Ubuntu machine in the 192.168.0.0/24 subnet.
+Perform privilege escalation to root user and find a target file in the root dir.
+1. nmap -sV -p 22 192.168.0.0/24
+    - Search subnet for open ssh ports 
+2. ssh user@<ip> and login with given credentials
+3. sudo -i
+    - Create a root terminal that has root privileges
+4. cd /
+    - go to root dir
+5. find . -name target.txt
